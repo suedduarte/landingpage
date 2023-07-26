@@ -1,68 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/icone.png">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promoção Chicago</title>
+    <title>Starbucks Landing Page</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <!--dataaos-->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ 
 </head>
 <body>
-    <header>
-
-        <section class="section2" >
-
-        <div class="container-logo">
-            <div class="logo-imagem">
-                <img src="img/logo3.jpg" width="100px" height="60px">
-            </div>
-        
-        </section>
-
-        <div class="menu">
-            <ul>
-                <li><a href="https://instagram.com/starbucks"><img src="img/instagram.png" width="30px" height="30px"></a></li>
-                <li><a href="https://www.facebook.com/Starbucks/"><img src="img/facebook.png" width="30px" height="30px" ></a></li>
+    
+    <!-- cabeçalho -->
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://starbucks.com.br/menu-list">Cardápio</a></li>
+                <li><a href="https://www.instagram.com/starbucksbrasil/">Novidades</a></li>
+                <li><a href="https://www.starbucks.com.br/sobre/atendimento">Contato</a></li>
             </ul>
+        </header>
+
+        <!-- texto e botão -->
+        <div class="content" >
+            <div class="textBox" data-aos="fade-down">
+                <h2>Não é apenas um café<br>É <span> Starbucks!</span></h2>
+                <p>Desde o início, a Starbucks se propunha a ser um tipo de empresa diferente, que não apenas celebrava o café e sua rica tradição, mas também trazia um sentimento de conexão. Nossa missão é inspirar e nutrir o espírito humano – uma pessoa, uma xícara de café e uma comunidade de cada vez.</p>
+                <a href="https://blog.ucoffee.com.br/historia-da-starbucks/">Saiba Mais</a>
+            </div> 
+            <div class="imgBox" data-aos="fade-up">
+                <img src="img/img1.png" class="starbucks" alt="coffe">
+            </div>
         </div>
-
-        </div>
-    </header>
-  
-<br><br><br>    
-
-    <section class="conteudo">
-
-        <div class="texto" >
-            <h2>CONHEÇA A MAIOR STARBUCKS DO MUNDO</h2>
-<br>            
-                <p> Cadastre-se já em nossa promoção que pode te levar para conhecer a maior de todas nossas cafeterias que é localizada em Chicago - EUA, com tudo pago.</p>
-<br>                                       
-                <p> Para conseguir números concorrentes é muito simples! Sempre quando você consumir algo em uma de nossas lojas na hora do pagamento você receberá um ticket, e é através dele que você irá fazer seu cadastro.</p>
-<br>                    
-                <p> Apenas 5 brasileiros terão a chance de ganhar, entre 2023 e 2024 suas chances são existentes!</p>
-<br><br><br>                
-                <a href="cadastro.html" class="botao">Cadastre-se</a>          
-        </div>
-
-        <div class="imagem"> 
-            <img src="img/artecoffe.png" class="arte"  width="520px" height="500px">
-        </div>
-
+        <ul class="thumb">
+            <li><img src="img/thumb2.png" onclick="imgSlider('img/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="img/thumb1.png" onclick="imgSlider('img/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="img/thumb3.png" onclick="imgSlider('img/img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
     </section>
 
- <br>
- 
-    <footer>
-        Desing by: Sued Duarte &copy; | 
-        Lading Page - Starbucks | Contato: <a href="https://instagram.com/sued_duarte?igshid=YmMyMTA2M2Y=">@sued_duarte</a>
+     <!-- rodapé -->
+     <footer class="footer">
+        <div class="footer-text">
+            <p>Exemplo de Landing Page.</p>
+        </div>
+       <div class="social-media">
+                <a href="https://github.com/suedduarte"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/suedduarte"><i class='bx bxl-linkedin'></i></a>
+                <a href="mailto:suedduarte57@gmail.com"><i class='bx bxs-envelope'></i></a>
+                <a href="https://instagram.com/sued_duarte"><i class='bx bxl-instagram-alt'></i></a>
+        </div> 
+            <div class="footer-text">
+            <p>Copyright &copy; 2023 by Sued Duarte </p> 
+            </div>
     </footer>
-
-
-
-
-
     
+    <!-- JavaScript -->
+    <script type="text/javascript">
+        /* para mudar a imagem de acordo com o click */
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        /* para mudar a cor do círculo */
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        
+        /* menu hambúrguer */
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+    <script>AOS.init();</script>
+
 </body>
 </html>
