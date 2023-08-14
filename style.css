@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root{
-    --main-color: #9A81FF;
+    --main-color: #8d71fc;
     --text-color: #333;
     --bg-color: #fff;
 }
@@ -23,7 +23,7 @@
 ::-webkit-scrollbar-thumb{
     width: 0.5rem;
     height: 10px;
-    background-color: #acceaa;
+    background-color: var(--text-color);
     border-radius: 2rem;
 }
 
@@ -54,9 +54,9 @@ header{
     align-items: center;
 }
 
-header .logo{
+header .logo img{
     position: relative;
-    max-width: 2rem;
+    max-width: 3rem;
 }
 
 header ul{
@@ -130,7 +130,7 @@ header ul li a:hover{
 }
 
 .content .textBox a:hover{
-    background-color: #eb7495;
+    background-color: #59a981;
     transform:translateX(-15px);
 }
 
@@ -310,12 +310,21 @@ header ul li a:hover{
     }
 
     .circle{
-        clip-path: circle(400px at center bottom);
+        clip-path: circle(340px at center bottom);
     }
 
     .footer{
         padding: 2rem 3%;
         margin-top: 4rem;
+        background-color: transparent;
+    }
+
+    .footer .social-media a{
+        background-color: #9A81FF;
+    }
+
+    .footer-text p{
+        color: #9A81FF;
     }
 }
 
